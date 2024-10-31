@@ -1,1 +1,3 @@
- This is repo to understand git concepts.
+ This is repository is to understand git concepts.
+
+
