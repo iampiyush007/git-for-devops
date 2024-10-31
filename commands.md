@@ -1,62 +1,82 @@
+This guide walks you through a basic Git workflow using commands and explanations.
+
 Preparation
-Create Directory (mkdir): mkdir git-for-devops
-List Directory Contents (ls): ls
+
+Create Directory:
+mkdir git-for-devops
+List Directory Contents:
+ls
 Navigation
 
-Change Directory (cd): cd git-for-devops/
+Change Directory:
+cd git-for-devops/
 Verification
 
-List Directory Contents (ls): ls
-Print Working Directory (pwd): pwd
+List Directory Contents:
+ls
+Print Working Directory:
+pwd
 Initialization
 
-Initialize Git Repository (git init): git init
-List Directory Contents (ls): ls (Shows hidden files with ls -a)
-Show All Files (ls -a): ls -a
+Initialize Git Repository:
+git init
+List Directory Contents (including hidden files): This command (ls -a) shows hidden files like the Git repository files.
 Status
 
-Check Repository Status (git status): git status
+Check Repository Status:
+git status
 Adding Files
 
-Create New Files (touch): touch nibba.txt nibbi.txt
-List Directory Contents (ls): ls
-Check Repository Status (git status): git status (Shows new files)
+Create New Files:
+touch nibba.txt nibbi.txt
+List Directory Contents:
+ls
+Check Repository Status: This shows the newly created files.
 Staging & Unstaging
 
-Add Files to Staging (git add): git add nibba.txt nibbi.txt
-Check Repository Status (git status): git status (Shows staged files)
-Unstage a File (git rm --cached): git rm --cached nibba.txt
-Check Repository Status (git status): git status (Shows nibbi.txt staged)
+Add Files to Staging:
+git add nibba.txt nibbi.txt
+Check Repository Status: This shows the files added to the staging area (ready for commit).
+Unstage a File:
+git rm --cached nibba.txt
+Check Repository Status: This shows only nibbi.txt staged.
 Restoring
 
-Re-add File to Staging (git add): git add nibba.txt
-Check Repository Status (git status): git status (Shows both files staged)
+Re-add File to Staging:
+git add nibba.txt
+Check Repository Status: This shows both files staged again.
 Committing
 
-Commit Changes (git commit): git commit -m "hey there" nibba.txt nibbi.txt
+Commit Changes:
+git commit -m "hey there" nibba.txt nibbi.txt
 User Setup (Optional)
 
-Set Global User Info (git config):
+Set Global User Info:
 git config --global user.email "piyushdoifode05@gmail.com"
 git config --global user.name "piyushdoifode"
 Further Commit (Optional - Doesn't Work)
 
-Attempt Another Commit (git commit): git commit -m "hey there" nibba.txt nibbi.txt (Won't work without changes)
+You can't commit the same changes again without modifications.
 Verification & Removal
 
-List Directory Contents (ls): ls
-Check Repository Status (git status): git status
-Remove File from Disk (rm): rm -rf nibba.txt (Use with caution!)
-Check Repository Status (git status): git status (Shows deleted file)
+List Directory Contents:
+ls
+Check Repository Status:
+git status
+Remove File from Disk (Use with caution!):
+rm -rf nibba.txt
+Check Repository Status: This shows the deleted file.
 Restore from Staging
 
-Restore File from Staging (git restore): git restore nibba.txt
-List Directory Contents (ls): ls (File not restored to disk)
-Check Repository Status (git status): git status (Shows deleted file)
+Restore File from Staging:
+git restore nibba.txt
+This restores the file to the working directory but not the disk.
+
 Restore Attempt (Won't Work)
 
-Attempt Restore Again (git restore): git restore nibba.txt (Won't work as it's not staged)
-Check Repository Status (git status): git status (Shows deleted file)
+You can't restore an unstaged file using git restore.
 Final Verification
 
-List Directory Contents (ls): ls (File remains deleted)
+List Directory Contents:
+ls
+The file remains deleted from the disk.
