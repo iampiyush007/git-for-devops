@@ -1,107 +1,62 @@
-1. Create a new directory:
+Preparation
+Create Directory (mkdir): mkdir git-for-devops
+List Directory Contents (ls): ls
+Navigation
 
-mkdir git-for-devops
-2. List the contents of the current directory:
+Change Directory (cd): cd git-for-devops/
+Verification
 
-ls
-3. Change to the newly created directory:
+List Directory Contents (ls): ls
+Print Working Directory (pwd): pwd
+Initialization
 
-cd git-for-devops/
-4. List the contents of the current directory:
+Initialize Git Repository (git init): git init
+List Directory Contents (ls): ls (Shows hidden files with ls -a)
+Show All Files (ls -a): ls -a
+Status
 
-ls
-5. Print the current working directory:
+Check Repository Status (git status): git status
+Adding Files
 
-pwd
-6. Initialize a Git repository:
+Create New Files (touch): touch nibba.txt nibbi.txt
+List Directory Contents (ls): ls
+Check Repository Status (git status): git status (Shows new files)
+Staging & Unstaging
 
-git init
-7. List the contents of the current directory:
+Add Files to Staging (git add): git add nibba.txt nibbi.txt
+Check Repository Status (git status): git status (Shows staged files)
+Unstage a File (git rm --cached): git rm --cached nibba.txt
+Check Repository Status (git status): git status (Shows nibbi.txt staged)
+Restoring
 
-ls
-8. List all files, including hidden ones:
+Re-add File to Staging (git add): git add nibba.txt
+Check Repository Status (git status): git status (Shows both files staged)
+Committing
 
-ls -a
-9. Check the current status of the repository:
+Commit Changes (git commit): git commit -m "hey there" nibba.txt nibbi.txt
+User Setup (Optional)
 
-git status
-10. Create two new files:
-
-touch nibba.txt nibbi.txt
-11. List the contents of the current directory:
-
-ls
-12. Check the current status of the repository:
-
-git status
-13. Add the new files to the staging area:
-
-git add nibba.txt nibbi.txt
-14. Check the current status of the repository:
-
-git status
-15. Remove the "nibba.txt" file from the staging area:
-
-git rm --cached nibba.txt
-16. Check the current status of the repository:
-
-git status
-17. Add the "nibba.txt" file back to the staging area:
-
-git add nibba.txt
-18. Check the current status of the repository:
-
-git status
-19. Commit the changes to the repository:
-
-git commit -m "hey there" nibba.txt nibbi.txt
-20. Set your global Git user information:
-
+Set Global User Info (git config):
 git config --global user.email "piyushdoifode05@gmail.com"
 git config --global user.name "piyushdoifode"
-21. Commit the changes to the repository again:
+Further Commit (Optional - Doesn't Work)
 
-git commit -m "hey there" nibba.txt nibbi.txt
-22. List the contents of the current directory:
+Attempt Another Commit (git commit): git commit -m "hey there" nibba.txt nibbi.txt (Won't work without changes)
+Verification & Removal
 
-ls
-23. Check the current status of the repository:
+List Directory Contents (ls): ls
+Check Repository Status (git status): git status
+Remove File from Disk (rm): rm -rf nibba.txt (Use with caution!)
+Check Repository Status (git status): git status (Shows deleted file)
+Restore from Staging
 
-git status
-24. Remove the "nibba.txt" file from the disk:
+Restore File from Staging (git restore): git restore nibba.txt
+List Directory Contents (ls): ls (File not restored to disk)
+Check Repository Status (git status): git status (Shows deleted file)
+Restore Attempt (Won't Work)
 
-rm -rf nibba.txt
-25. Check the current status of the repository:
+Attempt Restore Again (git restore): git restore nibba.txt (Won't work as it's not staged)
+Check Repository Status (git status): git status (Shows deleted file)
+Final Verification
 
-git status
-26. Restore the "nibba.txt" file from the staging area:
-
-git restore nibba.txt
-27. List the contents of the current directory:
-
-ls
-28. Check the current status of the repository:
-
-git status
-29. Attempt to restore the "nibba.txt" file again (won't work):
-
-git restore nibba.txt
-30. Check the current status of the repository:
-
-git status
-31. List the contents of the current directory:
-
-ls
-
-
-
-
-
-
-
-
-
-
-
-
-
+List Directory Contents (ls): ls (File remains deleted)
